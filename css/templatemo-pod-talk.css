@@ -2251,4 +2251,9 @@ background: #f5f7fb;
 	.input-group.input-group-lg {
   display: none;
 }
+	.hero2-subtitle {
+  text-align: center;
+  width: 100% !important;
+  max-width: 100%;
+}
 }
