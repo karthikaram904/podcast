@@ -895,7 +895,6 @@ function playAudio(audioId, btn) {
     <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Mobile dropdown click toggle
   document.querySelectorAll('.navbar .dropdown-toggle')
     .forEach(function (toggle) {
 
@@ -906,29 +905,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
           const menu = this.nextElementSibling;
 
-          // close other dropdowns
           document.querySelectorAll('.navbar .dropdown-menu.show')
-            .forEach(function (openMenu) {
-              if (openMenu !== menu) {
-                openMenu.classList.remove('show');
-              }
+            .forEach(open => {
+              if (open !== menu) open.classList.remove('show');
             });
 
           menu.classList.toggle('show');
         }
+
       });
 
     });
 
-  // When navbar closes → close all dropdowns automatically
-  const navbar = document.getElementById('navbarNav');
-  navbar.addEventListener('hidden.bs.collapse', function () {
-    document.querySelectorAll('.navbar .dropdown-menu.show')
-      .forEach(menu => menu.classList.remove('show'));
-  });
-
 });
 </script>
+
 
 
 </body>
