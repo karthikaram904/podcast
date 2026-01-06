@@ -2257,3 +2257,20 @@ background: #f5f7fb;
   max-width: 100%;
 }
 }
+@media (max-width: 768px) {
+
+.owl-carousel-info {
+  padding: 10px;
+}
+ .copyright-text {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .nav-arrows button {
+  margin-bottom: 10px;
+}
+.about-grid,.episode-item {
+  display: block !important;
+  
+}
+}
