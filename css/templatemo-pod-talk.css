@@ -2271,6 +2271,9 @@ background: #f5f7fb;
 }
 .about-grid,.episode-item {
   display: block !important;
-  
 }
+	.navbar-toggler .navbar-toggler-icon::before, .navbar-toggler .navbar-toggler-icon::after
+	{
+	background:var(--primary-color)	;
+	}
 }
