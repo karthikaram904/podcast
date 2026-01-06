@@ -763,29 +763,38 @@ https://templatemo.com/tm-584-pod-talk
     </footer>
 
 
+    
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>
-    <script>
-function playAudio(id, btn) {
-    const audio = document.getElementById(id);
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    document.querySelectorAll('audio').forEach(a => {
-        if (a !== audio) a.pause();
-    });
+    <script>
+function playAudio(audioId, btn) {
+    const audio = document.getElementById(audioId);
+    const icon = btn.querySelector('i');
 
     if (audio.paused) {
+        // stop other audios
+        document.querySelectorAll('audio').forEach(a => {
+            a.pause();
+            a.currentTime = 0;
+        });
+
         audio.play();
-        btn.innerHTML = '<i class="bi-pause-fill"></i>';
+        icon.classList.remove('bi-play-fill');
+        icon.classList.add('bi-pause-fill');
     } else {
         audio.pause();
-        btn.innerHTML = '<i class="bi-play-fill"></i>';
+        icon.classList.remove('bi-pause-fill');
+        icon.classList.add('bi-play-fill');
     }
 }
 </script>
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
