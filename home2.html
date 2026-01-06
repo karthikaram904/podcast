@@ -44,34 +44,38 @@ https://templatemo.com/tm-584-pod-talk
 
     <main>
 
-        <nav class="navbar navbar-expand-lg home2-navbar">
-    <div class="container-fluid">
-
-        <!-- Brand -->
-        <a class="navbar-brand me-lg-5 me-0" href="index.html">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand me-lg-5 me-0" href="index.html">
                     <img src="images/podcast-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
                 </a>
 
-        <!-- Toggle -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#home2Navbar" aria-controls="home2Navbar"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
+                    <div class="input-group input-group-lg">
+                        <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast"
+                            aria-label="Search">
 
-        <!-- Menu -->
-        <div class="collapse navbar-collapse" id="home2Navbar">
+                        <button type="submit" class="form-control" id="submit">
+                            <i class="bi-search"></i>
+                        </button>
+                    </div>
+                </form>
 
-            <!-- Center menu -->
-            <ul class="navbar-nav ms-lg-auto home2-menu">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle active" href="#" id="navbarLightDropdownMenuLink" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Home</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="index.html">Home1</a></li>
+                                <li><a class="dropdown-item active" href="index.html">Home1</a></li>
 
-                                <li><a class="dropdown-item active" href="home2.html">Home2</a></li>
+                                <li><a class="dropdown-item" href="home2.html">Home2</a></li>
                             </ul>
                         </li>
 
@@ -94,33 +98,24 @@ https://templatemo.com/tm-584-pod-talk
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="admin-dashboard.html">Dashboard</a>
                         </li>
-                <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="login.html">Login</a>
                         </li>
+
                     </ul>
-
-
-            <!-- Right actions -->
-            <div class="d-flex align-items-center gap-3">
-                <form class="home2-search d-none d-lg-block">
-                    <input type="search" placeholder="Search podcast...">
-                </form>
-                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
                       🌙
                     </button>
                     <button id="rtl-toggle" class="rtl-btn" aria-label="Toggle RTL">
                       ⇄
                     </button>
-                
+                    
+                </div>
             </div>
-
-        </div>
-    </div>
-</nav>
+        </nav>
 
 
 
