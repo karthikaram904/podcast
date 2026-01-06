@@ -2222,3 +2222,33 @@ background: #f5f7fb;
         .text-left {
   text-align: left;
 }
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px;
+  }
+
+  .navbar .dropdown-menu {
+    position: static;
+    float: none;
+    display: none;
+    margin-left: 15px;
+  }
+
+  .navbar .dropdown-menu.show {
+    display: block;
+  }
+
+  #rtl-toggle,#theme-toggle,.navbar .dropdown-menu::before
+  {
+    display: none;
+  }
+  
+    .navbar-nav .dropdown-menu
+    {
+      max-width: 180px;
+    }
+	.input-group.input-group-lg {
+  display: none;
+}
+}
