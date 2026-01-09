@@ -93,3 +93,8 @@ const themeBtn = document.getElementById("theme-toggle");
     const savedTheme = localStorage.getItem("theme") || "light";
     setTheme(savedTheme);
   });
+document.querySelectorAll('.navbar-collapse .nav-link').forEach(el => {
+    el.addEventListener('click', () => {
+      new bootstrap.Collapse(document.getElementById('navbarCollapse')).hide();
+    });
+  });
