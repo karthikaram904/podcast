@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creator Dashboard</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="images/favicon.ico" rel="icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f7fb;
+        }
+
+        /* ===== Desktop Sidebar ===== */
+        .sidebar {
+            height: 100vh;
+            background: #111827;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            width: 240px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .brand-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar .brand-logo img {
+            width: 90px;
+        }
+
+        .sidebar a {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #1f2937;
+            color: #fff;
+        }
+
+        /* ===== Main Content ===== */
+        .main {
+            margin-left: 240px;
+            padding: 30px;
+        }
+
+        .card-box {
+            border-radius: 16px;
+            border: none;
+        }
+
+        .stat-icon {
+            font-size: 30px;
+            opacity: 0.7;
+        }
+
+        /* ===== Mobile View ===== */
+        @media (max-width: 768px) {
+
+            .sidebar {
+                display: none;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+
+        /* Offcanvas mobile links */
+        .offcanvas a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .offcanvas a:hover {
+            opacity: 0.8;
+        }
+        .offcanvas-body a.active {
+            background: #1f2937;
+            color: #fff;
+            padding: 10px 0px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- ===== Mobile Navbar ===== -->
+<nav class="navbar navbar-light bg-white shadow-sm d-md-none">
+    <div class="container-fluid">
+
+        <button class="btn btn-dark" type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileSidebar">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <!-- LOGO -->
+        <a href="index.html" class="navbar-brand">
+            <img src="images/podcast-logo.png"
+                 alt="Logo"
+                 style="height:40px;">
+        </a>
+
+    </div>
+</nav>
+
+<!-- ===== Desktop Sidebar ===== -->
+<div class="sidebar d-none d-md-flex">
+    <div class="brand-logo">
+        <a href="index.html">
+            <img src="images/podcast-logo.png" alt="Brand Logo">
+        </a>
+    </div>
+
+    <a href="admin-dashboard.html" class="active">
+        <i class="bi bi-speedometer2 me-2"></i> Dashboard
+    </a>
+
+    <a href="upload-episode.html">
+        <i class="bi bi-cloud-upload me-2"></i> Upload Episode
+    </a>
+
+    <a href="episodes.html">
+        <i class="bi bi-mic me-2"></i> Episodes
+    </a>
+
+    <a href="analytics.html">
+        <i class="bi bi-bar-chart me-2"></i> Analytics
+    </a>
+
+    <a href="logout.html">
+        <i class="bi bi-box-arrow-right me-2"></i> Logout
+    </a>
+</div>
+
+<!-- ===== Mobile Sidebar (Offcanvas) ===== -->
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileSidebar">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+
+        <a class="active" href="admin-dashboard.html">
+            <i class="bi bi-speedometer2 me-2"></i> Dashboard
+        </a>
+
+        <a href="upload-episode.html">
+            <i class="bi bi-cloud-upload me-2"></i> Upload Episode
+        </a>
+
+        <a href="episodes.html">
+            <i class="bi bi-mic me-2"></i> Episodes
+        </a>
+
+        <a href="analytics.html">
+            <i class="bi bi-bar-chart me-2"></i> Analytics
+        </a>
+
+        <a href="logout.html">
+            <i class="bi bi-box-arrow-right me-2"></i> Logout
+        </a>
+
+    </div>
+</div>
+
+<!-- ===== Main Content ===== -->
+<div class="main">
+
+    <h3 class="mb-4">Dashboard Overview</h3>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="card card-box p-3">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>Total Episodes</h6>
+                        <h3>24</h3>
+                    </div>
+                    <i class="bi bi-mic stat-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card card-box p-3">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>Total Listeners</h6>
+                        <h3>120K</h3>
+                    </div>
+                    <i class="bi bi-headphones stat-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card card-box p-3">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>Total Likes</h6>
+                        <h3>8.2K</h3>
+                    </div>
+                    <i class="bi bi-heart stat-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card card-box p-3">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>Monthly Plays</h6>
+                        <h3>35K</h3>
+                    </div>
+                    <i class="bi bi-graph-up stat-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card-box p-4">
+        <h5 class="mb-3">Recent Episodes</h5>
+
+        <table class="table align-middle">
+            <thead>
+                <tr>
+                    <th>Episode</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Plays</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Finding Joy in Daily Life</td>
+                    <td>Mar 20, 2024</td>
+                    <td><span class="badge bg-success">Published</span></td>
+                    <td>12K</td>
+                </tr>
+                <tr>
+                    <td>Mindfulness & Growth</td>
+                    <td>Mar 10, 2024</td>
+                    <td><span class="badge bg-success">Published</span></td>
+                    <td>9.4K</td>
+                </tr>
+                <tr>
+                    <td>Upcoming Tech Trends</td>
+                    <td>Mar 02, 2024</td>
+                    <td><span class="badge bg-warning">Draft</span></td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
